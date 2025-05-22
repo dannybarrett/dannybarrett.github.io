@@ -1,3 +1,8 @@
+---
+import '../styles/globals.css';
+import menu from '../assets/menu.svg';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,6 +13,24 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<nav class="flex justify-end items-center p-4">
+			<details>
+				<summary class="cursor-pointer list-none">
+					<img src={menu.src} alt="Menu" />
+				</summary>
+				<ul class="absolute top-0 left-0 w-5/6 h-screen bg-background p-4 text-lg">
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/about">About</a>
+					</li>
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+				</ul>
+			</details>
+		</nav>
 		<slot />
 	</body>
 </html>

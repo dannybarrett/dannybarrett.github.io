@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foreground: oklch(0.25 0 0);
+  --color-background: oklch(0.95 0 0);
+}
+
+/* @theme dark {
+  --color-foreground: oklch(0.95 0 0);
+  --color-background: oklch(0.25 0 0);
+} */
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  p {
+    @apply text-foreground/85;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 py-8 md:px-8 md:py-16;
+  }
+}

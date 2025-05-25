@@ -1,0 +1,32 @@
+---
+import Button from "../components/ui/Button";
+import Layout from "../layouts/Layout.astro";
+import { Github, Linkedin } from "@lucide/astro";
+---
+
+<Layout>
+  <main
+    class="flex flex-col gap-4 lg:gap-8 items-center justify-center text-center"
+  >
+    <div class="flex flex-col gap-1">
+      <h1>Let's Connect</h1>
+      <p>
+        I'm always interested in discussing new opportunities and collaborating
+        on exciting projects. Whether you have a question, want to talk about
+        React, or just want to say hello, feel free to reach out!
+      </p>
+    </div>
+    <div class="flex items-center gap-4 lg:gap-8">
+      <a href="https://github.com/dannybarrett">
+        <Button variant="outline" size="icon">
+          <Github />
+        </Button>
+      </a>
+      <a href="https://www.linkedin.com/in/dannybarrett92">
+        <Button variant="outline" size="icon">
+          <Linkedin />
+        </Button>
+      </a>
+    </div>
+  </main>
+</Layout>

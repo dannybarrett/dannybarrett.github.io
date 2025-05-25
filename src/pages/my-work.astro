@@ -1,7 +1,59 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/ui/Card.tsx";
+import Button from "../components/ui/Button";
+import MoneyBuddy from "../assets/money-buddy.webp";
+
+const projects = [
+  {
+    name: "Money Buddy",
+    description:
+      "A web application that helps users manage their finances and synchronize with their bank accounts.",
+    website: "https://money-buddy-eight.vercel.app",
+    link: "/my-work/money-buddy",
+    github: "https://github.com/dannybarrett/money-buddy",
+    image: MoneyBuddy,
+    technologies: ["React", "Next.js", "Tailwind CSS", "PostgreSQL"],
+  },
+];
 ---
 
 <Layout>
-  <h1>My Work</h1>
+  <main class="w-full h-full flex flex-col items-center justify-center">
+    <header class="flex flex-col text-center gap-2 lg:gap-4">
+      <h1>Codes and Creations</h1>
+      <p>
+        Here are some of the projects I'm most proud of, showcasing my skills in
+        building interactive web and exploring cross-platform applications. Each
+        one presented unique challenges and opportunities to learn and create.
+      </p>
+    </header>
+    <section class="section-padding">
+      {
+        projects.map((project) => (
+          <Card class="flex flex-col gap-4 w-full max-w-md">
+            <img
+              src={project.image.src}
+              alt={project.name}
+              class="aspect-[3/2] rounded-lg shadow-inner"
+            />
+            <h2>{project.name}</h2>
+            <p>{project.description}</p>
+            <div class="flex gap-4 justify-between">
+              <a href={project.link} class="w-full">
+                <Button variant="outline" class="w-full">
+                  Learn More
+                </Button>
+              </a>
+              <a href={project.website} class="w-full">
+                <Button variant="secondary-outline" class="w-full">
+                  Visit Website
+                </Button>
+              </a>
+            </div>
+          </Card>
+        ))
+      }
+    </section>
+  </main>
 </Layout>

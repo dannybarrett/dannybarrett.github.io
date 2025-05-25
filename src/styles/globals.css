@@ -4,14 +4,14 @@
   --color-foreground: oklch(0.25 0 0);
   --color-background: oklch(0.97 0 0);
   --color-primary: oklch(0.5 0.175 240);
-  --color-secondary: oklch(0.5 0.2 300);
+  --color-secondary: oklch(0.5 0.175 120);
 }
 
 @theme dark {
   --color-foreground: oklch(0.95 0 0);
   --color-background: oklch(0.25 0 0);
-  --color-primary: oklch(0.85 0.15 240);
-  --color-secondary: oklch(0.5 0.15 300);
+  --color-primary: oklch(0.85 0.15 270);
+  --color-secondary: oklch(0.85 0.175 60);
 }
 
 @layer base {
@@ -30,6 +30,10 @@
 
   h1 {
     @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
   }
 
   p {

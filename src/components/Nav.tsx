@@ -19,7 +19,7 @@ export default function Nav(props: { pathname: string }) {
   return (
     <nav class="p-5 lg:p-8 flex justify-end lg:justify-center">
       <button class="lg:hidden" onClick={() => setOpen(!open())}>
-        <img src={menu.src} alt="Logo" />
+        <img src={menu.src} alt="Logo" class="dark:invert" />
       </button>
       <div
         class={`${open() ? "block" : "hidden"} lg:block absolute lg:relative top-0 left-0 bg-background lg:bg-transparent w-4/5 lg:w-auto h-screen lg:h-auto p-5 lg:p-0 shadow-sm lg:shadow-none z-50`}

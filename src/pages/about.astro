@@ -1,10 +1,120 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const yearsSinceStart = new Date().getFullYear() - 2005;
 ---
 
 <Layout>
-  <main class="w-full h-full flex flex-col items-center">
+  <main class="w-full h-full flex flex-col gap-4 items-center">
     <h1>My Dev Journey</h1>
-    <p>Hey, how's it going?</p>
+    <p>
+      Hey, how's it going? My name is Danny and I have been programming for 
+      roughly {yearsSinceStart} years. I started my love for programming back 
+      in 2005 when I was 13 years old (don't do the math please). Really, it 
+      was just to create cheats for my favorite game at the time, Runescape. I 
+      thought it was amazing the first time I got a deobfuscated client and 
+      was able to make changes in it to automate tasks in-game. Obviously, I 
+      didn't know what I was really doing, as I was following a ton of 
+      tutorials and copying code from forums, but it got me introduced to Java 
+      and the concept of programming.
+    </p>
+    <p>
+      Fast forward a few years to around 2010, I started making websites for my friends and 
+      family, which was interesting, because at the time most of them were made 
+      using basic PHP and HTML, as this was before the modern era of HTML5, 
+      CSS3, and JavaScript frameworks. At the time, I really didn't consider 
+      web development as my main focus, as I was more interested in game 
+      development and software engineering.
+    </p>
+    <p>
+      2012 was really the year I started to really learn how to create cohesive 
+      and functional applications, rather than just editing existing code, or 
+      creating basic websites. I had been feeling nostalgic and ended up finding
+      a community of Runescape Classic private server developers, and was able to
+      see the code they had made from scratch to integrate with the deobfuscated
+      clients we had been using in the past to create bots. 
+    </p>
+    <p>
+      I joined the community forums and IRC channels, and started to make friends 
+      with the developers of the servers, and they were cool enough to mentor me as 
+      I started to learn how to create my own programs. I started with Java, and then 
+      got really obsessed with learning a bunch of different languages, so I would find
+      coding challenges online and try to solve them in as many languages as I could.
+      This was a great way to not only learn how to solve problems, but to also learn 
+      how programming languages all fundamentally work the same way, and how to
+      think like a programmer.
+    </p>
+    <p>
+      Fast forward to 2015. This is the year where I tried out Unity for the first time. 
+      I had always been interested in game development, but at the time didn't have the 
+      skills to create a full game from scratch. Unity was awesome in this regard, because 
+      not only was it a free game engine, but the scripting language was C#, which if you 
+      are familiar with Java, is basically the same language (I know there are 
+      differences, but come on, it's close enough). So naturally, I found out 
+      that there are these little competitions called Game Jams, where you collaborate
+      with other developers to create a game in a short amount of time. It's pretty fun, 
+      and allows you to quickly iterate on ideas and not get bogged down on a project when you have no experience.
+    </p>
+    <p>
+      The real reason this part of the journey is important is because I asked the guy I worked with on my first game jam
+      what he did for a living, and he was he was a Front-End Developer. I had never heard of this before, and he explained to me that he
+      created websites using HTML, CSS, and JavaScript. I quickly become very intrigued, not realizing that front-end development was even
+      a thing. I assumed that everything was still done full-stack in PHP, and that there was no real separation of concerns. I was then 
+      amazed by how much money front-end developers made, and how much demand there was for them. I thought, "Well, this can't be that hard,
+      I already know how to code, and I can learn modern web development in no time!"
+    </p>
+    <p>
+      Soon I was learning everything I could about modern web development. I already had a decent understanding of Javascript, as one of 
+      my old developer friends from my Runescape days had been obsessed with Javascript when it was first being integrated into modern 
+      workflows in the 2010-2013 era (along with HTML5 and CSS3). I was not aware of how far it had come since then, and the first time
+      I seen React, and honestly was kind of confused by it. I didn't understand why you would want to create your markup in Javascript,
+      and why some of the syntax was so weird (I mean, you still have to use ternary statements as conditions in JSX, which if you don't 
+      modularize your code, can get really messy).)
+    </p>
+    <p>
+      It was really around 2018 that I actually decided to go, "Let's try and actually get a job as a web developer." I had no idea how to 
+      create a professional resume, or really where to look, but I started applying to jobs anyway. At the time, I did find a recruiter that 
+      thought I had enough potential to get a job, and he set me up with a couple of interviews. I quickly learned that I had no idea how to 
+      do technical interviews, and that I needed to brush up on my data structures and algorithms. My first interview I felt like everything was 
+      going well, until they asked me to sit down and do a coding challenge on the spot. I sat there and couldn't even remember how to 
+      solve a simple problem, and ended up just showing the interviewer some pseudo-code for how I would solve it. The problem wasn't even hard, 
+      because when I got home, I was able to solve it in a few minutes. I had no idea how being put on the spot would affect my ability to think.
+    </p>
+    <p>
+      Anyway, I gave up on interviewing at that time, as I was working a full-time job at a retail store, and it was hard finding the time to not only 
+      brush up on my skills, but also to apply to jobs, drive to interviews, and follow-up. Luckily for me though, a family member of mine was 
+      starting a new business, and needed a website. He knew that I had always been technically inclined and had beeing programming for a long time, 
+      so he asked me if I would make the website for him. I took this as my opportunity to create my first professional website using modern technologies.
+      I guess I should say relatively modern, as I actually made the first version of the website using Express and EJS, which was alright, 
+      but I quickly realized wasn't amazing for creating a modular and maintainable codebase. The first version of the website was messy on the 
+      server, as his company had multiple pages that had similar but different content, and I had a lot of duplicated code. This is when I started to learn React, and how to create reusable components. It was this real world experience that made me realize just how 
+      powerful a modern framework like React could be, and how much easier it made creating an interactive and dynamic website.
+    </p>
+    <p>
+      In 2020, I decide that I was going to start my own business, and many people did at that time. I had already been working on a few side projects
+      for my uncle's business's (yes, he 2 businessed and a band). I figured that it was time to start making a living doing what I love. 
+      My web development agency was great, but I learned some hard lessons along the way. I had no idea how to successfully run a business, 
+      and I found it hard to get the motivation to work on projects that I wasn't passionate about, as well as marketing myself to potential clients.
+      I found that making basic websites for small businesses was not as fulfilling as I thought it would be, as the work was often quite repetitive, 
+      and not particularly challenging. What I did learn was that I really enjoyed creating web applications. For my company, I had created a 
+      bespoke CMS that allowed me to easily manage the content of my clients' websites, while allowing them to easily update certain parts of the site.
+      My content management system allowed my clients to create unique content models with custom fields, manage image assets, and even create and send marketing 
+      emails. For the content management system, I also ended up creating an open-source image optimization tool that integrated with the CMS, allowing 
+      the users to upload images and have them automatically optimized for the web, easily edited and resized through query parameters, and managed in 
+      one central location. 
+    </p>
+    <p>
+      Working on these applications taught me a ton about how to create solid and interactive user experiences, and taught me a bunch of useful skills and technologies (such as database management, 
+      linux server management, and even some DevOps). I quickly started spending most of my time working on the CMS, and dreading having to work 
+      on the basic websites for my clients. Another thing that also happened around this time was that website builders like Wix and even Webflow 
+      were essentially making my job obsolete. I was finding it harder and harder to convince clients that they needed a custom website, 
+      when they could just use a website builder for a fraction of the cost.
+    </p>
+    <p>
+      Which brings us to now. I decided that I want to focus on creating applications, because that's what I actually enjoy doing. 
+      I also decided that I don't want to run a business anymore, at least not in the sense of creating websites and marketing to small businesses. 
+      If I create an application that everyone loves, and that turns into a business, then great, but I'm not banking on that.
+      So right now, I'm focusing on creating applications that I think would be useful, and hopefully the next company I work for will see 
+      what I can do and hire me as a developer.
+    </p>
   </main>
 </Layout>

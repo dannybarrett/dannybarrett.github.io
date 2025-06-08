@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/ui/Card.tsx";
 import Button from "../components/ui/Button";
 import MoneyBuddy from "../assets/money-buddy.webp";
+import VarialCMS from "../assets/varial-cms.png";
+import VarialMediaLibrary from "../assets/varial-media-library.png";
 
 const projects = [
   {
@@ -15,6 +17,26 @@ const projects = [
     image: MoneyBuddy,
     technologies: ["React", "Next.js", "Tailwind CSS", "PostgreSQL"],
   },
+  {
+    name: "Varial CMS",
+    description:
+      "A content management system designed for Varial Web Development, allowing users to create, manage, and publish content easily.",
+    website: null,
+    link: "/my-work/varial-cms",
+    github: "https://github.com/varialweb/varial-cms-remix",
+    image: VarialCMS,
+    technologies: ["React", "Remix", "Tailwind CSS", "MongoDB"]
+  },
+  {
+    name: "Varial Media Library",
+    description:
+      "A server-side application for managing and optimizing images and featuring a robust API.",
+      website: null,
+    link: "/my-work/varial-media-library",
+    github: "https://github.com/varialweb/varial-media-library",
+    image: VarialMediaLibrary,
+    technologies: ["Node.js", "Express", "S3", "Sharp"]
+  }
 ];
 ---
 
@@ -28,28 +50,35 @@ const projects = [
         one presented unique challenges and opportunities to learn and create.
       </p>
     </header>
-    <section class="section-padding">
+    <section class="section-padding flex flex-wrap gap-8">
       {
         projects.map((project) => (
-          <Card class="flex flex-col gap-4 w-full max-w-md">
+          <Card class="flex flex-col justify-between gap-4 w-full max-w-md">
             <img
               src={project.image.src}
               alt={project.name}
               class="aspect-[3/2] rounded-lg shadow-inner"
             />
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
+            <header class="flex flex-col gap-1">
+              <h2>{project.name}</h2>
+              <p>{project.description}</p>
+            </header>
             <div class="flex gap-4 justify-between">
               <a href={project.link} class="w-full">
                 <Button variant="outline" class="w-full">
                   Learn More
                 </Button>
               </a>
-              <a href={project.website} class="w-full">
+              {project.website && <a href={project.website} class="w-full">
                 <Button variant="secondary-outline" class="w-full">
                   Visit Website
                 </Button>
-              </a>
+              </a>}
+              {!project.website && <a href={project.github} class="w-full">
+                <Button variant="secondary-outline" class="w-full">
+                  View on GitHub
+                </Button>
+              </a>}
             </div>
           </Card>
         ))
